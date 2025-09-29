@@ -15,7 +15,7 @@ def static_files(path):
     if os.path.exists(os.path.join(app.static_folder, path)):
         return send_from_directory(app.static_folder, path)
     # 如果文件不存在，返回主页面（适用于客户端路由）
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(app.static_folder, '404.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
